@@ -19,7 +19,7 @@ public class SecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth ->
                         auth.anyRequest().authenticated())
-//                .formLogin(form -> form.defaultSuccessUrl("/hello", true));
+//                .formLogin(form -> form.defaultSuccessUrl("/hello", true)); // this is default username, pass system
                 .oauth2Login(oauth2 -> oauth2.defaultSuccessUrl("/hello", true))
 
         ;
