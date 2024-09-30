@@ -1,0 +1,6 @@
+spring:
+  security:
+    user:
+      name: sagar
+      password: 1234
+

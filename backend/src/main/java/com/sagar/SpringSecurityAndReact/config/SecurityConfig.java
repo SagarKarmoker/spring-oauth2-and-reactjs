@@ -19,7 +19,7 @@ public class SecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth ->
                         auth.anyRequest().authenticated())
-                .formLogin(Customizer.withDefaults());
+                .formLogin(form -> form.defaultSuccessUrl("/hello", true));
 
         return http.build();
     }
